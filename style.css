@@ -1,0 +1,26 @@
+.jumbotron {
+    background: rgb(27, 32, 95);
+    text-align: center;
+    color: white;
+    margin-left: 16%;
+    margin-right: 16%
+}
+
+/* section headers */
+.panel-title {
+background: rgb(27, 32, 95);
+color: white; 
+border-radius: 3px;
+}
+
+.icon {
+    /* padding: 0 20px 0 20px; */
+    /* margin: 20px; */
+}
+
+
+/* input section */
+
+#input-body {
+    text-align: left;
+}

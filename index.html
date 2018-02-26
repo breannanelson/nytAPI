@@ -4,24 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+    <title>NYT API</title>
 </head>
 <body>
     
-  <div class="container">
+    <div class="jumbotron">
+        <h1 id="main-head">
+            <i class="fa fa-newspaper-o"></i>New York Times Search</h1>
+    </div>
 
-      <input type="text" id="search-term"><br>
-      <input type="text" id="number-records"><br>
-      <input type="text" id="start-year"><br>
-      <input type="text" id="end-year"><br>
-      <button id="search-btn">Search</button>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-main" id="input-body">
+                <div class="panel panel-head">
+                    <div class="panel panel-title">
+                        <i class="fa  fa-list-alt"></i>Search Parameters</div>
+                </div>
+                <div class="panel panel-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="search">Search Term: </label>
+                            <input type="text" class="form-line" id="search-term">
+                        </div>
+                        <div class="form-group">
+                            <label for="search">Number of Records to Retrieve: </label>
+                            <input type="text" class="form-line" id="number-records">
+                        </div>
+                        <div class="form-group">
+                            <label for="search">Start Year (Optional): </label>
+                            <input type="text" class="form-line" id="start-year">
+                        </div>
+                        <div class="form-group">
+                            <label for="search">End Year (Optional): </label>
+                            <input type="text" class="form-line" id="end-year">
+                        </div>
+                        <button type="submit" class="btn btn-default" id="search-btn">
+                            <i class="fa fa-search"></i>Search</button>
+                        <!-- <button type="submit" class="btn btn-default" id="clear-btn">
+                            <i class="fa fa-trash" id="clear-btn"></i>Clear Results</button> -->
 
-      <div id="topArticles">
-          <div id="title"></div>
-          <div id="author"></div>
-      </div>
+                    </form>
+                </div>
 
 
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12-md">
+            <div class="panel panel-main">
+                <div class="panel panel-head">
+                    <div class="panel panel-title">
+                        <span class="icon"><i class="fa fa-table"></i></span>Top Articles</div>
+                </div>
+                <div class="panel-body" id="topArticles">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+            <h6 class="text-center">Created by Team &copy; Yolo Swag 2018</h6>
+
+        </div>
+    </div>
+
+    </div>
+</div>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="./search.js"></script>
